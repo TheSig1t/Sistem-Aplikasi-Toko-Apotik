@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: #000;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.5;
+  width: 100%;
+  height: 120%;
+  background: url("https://1.bp.blogspot.com/-DDbyvbYZkSU/V85NZdH2eoI/AAAAAAAAFkE/YbkL4NTR7PIAT-COOYOJnfmUsYBmS1KfwCLcB/s1600/Anak%2Bsekolah.jpg");
+  background-position: center;
+  background-size:cover;
+}
+
+nav {
+  position: fixed;
+  padding: 25px 60px;
+  z-index: 1;
+}
+
+nav a{
+  text-decoration: none;
+}
+
+nav a h1 {
+  font-family: "Roboto", sans-serif;
+  color: #eb566c;
+  font-size: 1.9rem;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 25px;
+  border: #000;
+  backdrop-filter: blur(10px);
+}
+nav a h1:hover {
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+
+.form-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 4px;
+  padding: 50px;
+  width: 450px;
+  transform: translate(-50%, -40%);
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.form-wrapper h2 {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.form-wrapper form {
+  margin: 25px 0 65px;
+}
+
+form .form-control {
+  height: 50px;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.form-control input {
+  height: 100%;
+  width: 100%;
+  background: #333;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0 20px;
+}
+
+.form-control input:is(:focus, :valid) {
+  background: #444;
+  padding: 16px 20px 0;
+}
+.form-control  .foto {
+  padding:  10px;
+}
+
+.form-control input:is(:focus, :valid).foto {
+  background: #444;
+  padding:  10px 10px 0;
+}
+.form-control label {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  pointer-events: none;
+  color: #8c8c8c;
+  transition: all 0.1s ease;
+}
+
+.form-control input:is(:focus, :valid) ~ label {
+  font-size: 0.75rem;
+  transform: translateY(-130%);
+}
+
+form button {
+  width: 100%;
+  padding: 16px 0;
+  font-size: 1rem;
+  background: #eb566c;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  margin: 25px 0 10px;
+  cursor: pointer;
+  transition: 0.1s ease;
+}
+
+form button:hover {
+  transition: 0.3s ease;
+  background: rgba(13, 45, 62,0.8);
+}
+
+/* Gaya dasar untuk elemen <select> */
+select {
+    width: 100%; /* Lebar pilihan */
+    padding: 10px; /* Ruang dalam di sekitar teks */
+    border: 1px solid #fff; /* Border dengan warna abu-abu */
+    background-color: #444;
+    border-radius: 4px; /* Sudut yang sedikit melengkung */
+    font-size: 1rem; /* Ukuran font */
+    color: #8c8c8c;
+  }
+  
+  /* Gaya dasar untuk elemen <option> */
+  option {
+    font-size: 0.9rem; /* Ukuran font untuk pilihan */
+    padding: 5px 10px; /* Ruang dalam di sekitar teks */
+  }
+  
+  /* Warna latar belakang ketika opsi dipilih */
+  select:focus {
+    background-color: #444; /* Warna latar belakang yang berbeda saat fokus */
+    color: #8c8c8c;
+  }
+  
+  /* Menghilangkan tombol panah default di elemen <select> */
+  select::-ms-expand {
+    display: none;
+  }
+  
+  /* Menggunakan gambar untuk panah dropdown */
+  select {
+    appearance: none; /* Menghilangkan tampilan default (tombol panah) */
+    background-image: url('arrow-down.png'); /* Gambar panah dropdown */
+    background-position: right center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Stil panah dropdown pada saat hover */
+  select:hover {
+    cursor: pointer; /* Tanda kursor tangan saat mengarahkan ke elemen */
+  }
+
+.form-wrapper a {
+  text-decoration: none;
+}
+
+.form-wrapper a:hover {
+  text-decoration: underline;
+}
+
+.form-wrapper :where(label, p, small, a) {
+  color: #b3b3b3;
+}
+
+form .form-help {
+  display: flex;
+  justify-content: space-between;
+}
+
+form .remember-me {
+  display: flex;
+}
+
+form .remember-me input {
+  margin-right: 5px;
+  accent-color: #b3b3b3;
+}
+
+form .form-help :where(label, a) {
+  font-size: 0.9rem;
+}
+.form-wrapper p  {
+  position: absolute;
+  margin-top: -50px;
+}
+
+.form-wrapper p a {
+  color: #fff;
+}
+
+.form-wrapper small {
+  display: block;
+  margin-top: 10px;
+  color: #b3b3b3;
+}
+
+.form-wrapper small a {
+  color: #0071eb;
+}
+
+@media (max-width: 740px) {
+  body::before {
+    display: none;
+  }
+
+  nav,
+  .form-wrapper {
+    padding: 20px;
+  }
+
+  nav a img {
+    width: 140px;
+  }
+
+  .form-wrapper {
+    width: 100%;
+    top: 50%;
+  }
+
+  .form-wrapper form {
+    margin: 25px 0 40px;
+  }
+}
